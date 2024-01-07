@@ -10,6 +10,7 @@ module.exports = {
         orange: "#F59E0B",
         green: "#10B981",
         fadeblue: "#626687",
+        greenbutton: "#D1FAE5"
       },
       fontFamily: {
         lexend: ["Lexend", "sans-serif"],

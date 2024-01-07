@@ -3,3 +3,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#hero-and-nav{
+    background-image: url('./assets/HeroBg.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    right: 0%;
+    margin: 0;
+    padding: 0;
+
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+::-webkit-scrollbar-thumb{
+    background:  #4BE4C9;
+    border-radius: 10px;
+}

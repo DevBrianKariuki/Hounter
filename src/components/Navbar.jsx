@@ -7,15 +7,15 @@ const Navbar = () => {
   return (
     <nav className='w-full flex py-8 justify-between'>
       <div className='logo'>
-        <img src={Logo} className='w-[90%]' />
+        <img src={Logo} className='w-[90%] cursor-pointer' />
       </div>
-      <div className='flex gap-3'>
-        <p className='font-lexend'>What the hell</p>
+      <div className='flex items-center  gap-3'>
         <ul className='list-none flex gap-3'>
-        {menuLinks.map((link) => {
-          <li className='text-primary'>{link.title}</li>
-        })}
+          {menuLinks.map((link, index) => (
+            <li className='font-lexend text-sm text-md text-primary'  key={link.id}>{link.title}</li>
+          ))}
         </ul>
+        <button className='font-lexend text-sm text-white bg-primary px-6  rounded-full  py-2'>Sign up</button>
       </div>
     </nav>
   )
