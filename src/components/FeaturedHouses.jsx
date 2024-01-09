@@ -11,7 +11,7 @@ const FeaturedHouses = () => {
 
   return (
     <div className='w-full py-12 flex flex-col'>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between flex-col md:flex-row  items-center'>
             <div className='flex gap-2 flex-col'>
                 <div className='flex gap-2'>
                     <p className='font-lexend text-xs text-orange'>Our Recommendation</p>
@@ -41,7 +41,7 @@ const FeaturedHouses = () => {
                 </div>
             </div>
         </div>
-        <div className='flex items-center  gap-6 w-full my-6'>
+        <div className='flex items-center overlow-x-auto gap-6 w-full my-6'>
             {FeatureHouses.map((house) =>(
                 <FeatureCard photo={house.photo} key={house.id}  title={house.title} price={house.price}  
                 sellerpic={house.sellerpic} icon={house.icon} category={house.category} seller={house.seller} location={house.location}
@@ -53,7 +53,7 @@ const FeaturedHouses = () => {
 }
 
 const FeatureCard = ({photo, title,icon, price, seller, category,  sellerpic, location}) => (
-    <div className='flex w-[25%] hover:scale-105 cursor-pointer  flex-col gap-2'>
+    <div className='flex w-[100%] hover:scale-105 cursor-pointer flex-col gap-2'>
         <div className='rounded-xl relative w-full'>
             <div className='absolute bottom-3 px-3 bg-red-300 py-[5px] rounded-full left-4 gap-1 flex items-center'>
                <div>

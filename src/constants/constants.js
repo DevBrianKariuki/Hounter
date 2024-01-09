@@ -1,6 +1,6 @@
-import { seller1, seller2, seller3, seller4, House1, House2, House3, House4 } from "../assets"
-import { BsFire } from "react-icons/bs";
-import { GiMoneyStack } from "react-icons/gi";
+import { seller1, seller2, seller3, seller4, House1, House2, House3, House4,
+    Testimonial1, Testimonial2, Testimonial3,
+} from "../assets"
 
 export const menuLinks = [
     {
@@ -76,5 +76,41 @@ export const FeatureHouses = [
         seller: 'Jenny Wilson',
         location: 'Preston Rd. Inglewood, Maine 98380',
         category: 'Popular'
+    },
+]
+
+export const Testimonies = [
+    {
+        id: 'testimony1',
+        picture: Testimonial1,
+        title: 'My house sold out fast!',
+        desc: 'I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!',
+        buyer_picture: seller2,
+        buyer_name: 'Courtney Henry',
+        buyer_title: 'CEO Andarafish',
+        rating: 4.6
+
+    },
+    {
+        id: 'testimony2',
+        picture: Testimonial2,
+        title: 'Best! I got the house I wanted through Hounter',
+        desc: 'Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.',
+        buyer_picture: seller4,
+        buyer_name: 'Dianne Russell',
+        buyer_title: 'Managing Director',
+        rating: 4.3
+
+    },
+    {
+        id: 'testimony3',
+        picture: Testimonial3,
+        title: 'Through the Hounter, I can get a house for my self',
+        desc: 'By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!',
+        buyer_picture: seller1,
+        buyer_name: 'Esther Howard',
+        buyer_title: 'Head of Marketing',
+        rating: 4.2
+
     },
 ]
