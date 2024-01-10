@@ -20,6 +20,12 @@ import Slider1 from './Slider1.jpg'
 import Slider2 from './Slider2.jpg'
 import Slider3 from './Slider3.jpg'
 import Slider4 from './Slider4.jpg'
+import blog1 from './blog1.png'
+import blog2 from './blog2.png'
+import blog3 from './blog3.png'
+import blog4 from './blog4.png'
+import subscribe1 from './subscribe1.png'
+import subscribe2 from './subscribe2.png'
 
 export {
     Logo,
@@ -43,5 +49,11 @@ export {
     Slider1,
     Slider2,
     Slider3,
-    Slider4
+    Slider4,
+    blog1,
+    blog2,
+    blog3,
+    blog4,
+    subscribe1,
+    subscribe2
 }

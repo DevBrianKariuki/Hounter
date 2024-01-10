@@ -1,28 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#hero-and-nav{
-    background-image: url('./assets/HeroBg.svg');
-    background-position: right;
-    background-repeat: no-repeat;
-    right: 0%;
-    margin: 0;
-    padding: 0;
-
+#hero-and-nav {
+  background-image: url("./assets/HeroBg.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  right: 0%;
+  margin: 0;
+  padding: 0;
 }
 
-::-webkit-scrollbar{
-    width: 8px;
+#subscribe-div {
+  background: rgb(148, 185, 249);
+  background: linear-gradient(
+    41deg,
+    rgba(148, 185, 249, 1) 0%,
+    rgba(242, 251, 249, 1) 59%,
+    rgba(230, 229, 236, 1) 100%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #fff;
-  }
+  background: #fff;
+}
 
-::-webkit-scrollbar-thumb{
-    background:  #4BE4C9;
-    border-radius: 10px;
+::-webkit-scrollbar-thumb {
+  background: #4be4c9;
+  border-radius: 10px;
 }

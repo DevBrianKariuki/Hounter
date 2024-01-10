@@ -4,6 +4,8 @@ import FeaturedHouses from './FeaturedHouses'
 import LetsTour from './LetsTour'
 import Testimonials from './Testimonials'
 import Blog from './Blog'
+import Subscribe from './Subscribe'
+import Footer from './Footer'
 
 export {
     Navbar, 
@@ -11,5 +13,7 @@ export {
     FeaturedHouses,
     LetsTour,
     Testimonials,
-    Blog
+    Blog,
+    Subscribe,
+    Footer
 }

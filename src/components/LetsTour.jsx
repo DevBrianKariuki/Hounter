@@ -9,7 +9,7 @@ import { LetsTourImg } from '../assets';
 
 const LetsTour = () => {
   return (
-    <div className='w-full py-6 flex flex-col md:flex-row'>
+    <div className='w-full py-6 sm:px-20 px-6 flex flex-col md:flex-row'>
         <div className='flex w-full justify-center  md:w-[50%] flex-col gap-2'>
             <div className='flex flex-col py-3  gap-2'>
                 <p className='font-lexend text-sm text-orange'>Ready to Sell!</p>
