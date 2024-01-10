@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Hero, FeaturedHouses, LetsTour, Testimonials } from './components'
+import { Navbar, Hero, FeaturedHouses, LetsTour, Testimonials, Blog } from './components'
 import styles from './constants/styles'
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
           <FeaturedHouses />
           <LetsTour/>
           <Testimonials />
+          <Blog />
         </div>
       </div>
     </div>
