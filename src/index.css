@@ -13,6 +13,11 @@
   padding: 0;
 }
 
+#testimony-card {
+  bottom: -90px;
+  z-index: ;
+}
+
 #subscribe-div {
   background: rgb(148, 185, 249);
   background: linear-gradient(
