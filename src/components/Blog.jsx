@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { blogs } from "../constants/constants";
 import { IoTimeSharp } from "react-icons/io5";
 import { blog4, seller4 } from "../assets";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="w-full sm:px-20 px-6 flex flex-col py-12">
+    <div className="w-full sm:px-20 px-6 flex flex-col mt-28 py-12">
       <div className="flex w-full mb-6 flex-col items-center gap-4 justify-center">
-        <p className="font-lexend text-sm text-orange">
+        <p data-aos="fade-right" className="font-lexend text-sm text-orange">
           See tips and trick from our partnership
         </p>
-        <p className="font-lexend text-3xl font-bold text-primary">
+        <p
+          data-aos="fade-left"
+          className="font-lexend text-3xl font-bold text-primary"
+        >
           Find out more about selling and buying homes
         </p>
-        <button className="bg-green font-lexend text-white px-6 py-2 rounded-full">
+        <button
+          data-aos="zoom-in"
+          className="bg-green font-lexend text-white px-6 py-2 rounded-full"
+        >
           More Articles
         </button>
       </div>
@@ -30,7 +42,10 @@ const Blog = () => {
             />
           ))}
         </div>
-        <div className="w-full hover:scale-105 flex px-6 flex-col gap-4 justify-center">
+        <div
+          data-aos="fade-left"
+          className="w-full hover:scale-105 flex px-6 flex-col gap-4 justify-center"
+        >
           <img src={blog4} className="" />
           <div className="w-full flex gap-3">
             <div className="flex flex-col justify-center gap-3">
@@ -53,7 +68,10 @@ const Blog = () => {
 };
 
 const BlogCard = ({ picture, writer_pic, writer, title, time }) => (
-  <div className="w-full hover:cursor-pointer hover:scale-105 flex py-2  gap-5">
+  <div
+    data-aos="fade-right"
+    className="w-full hover:cursor-pointer hover:scale-105 flex py-2  gap-5"
+  >
     <img src={picture} className="w-[25%] h-[100%]" />
     <div className="flex flex-col justify-center gap-1">
       <div className="flex items-center gap-2">

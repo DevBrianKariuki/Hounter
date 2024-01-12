@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaHouse } from "react-icons/fa6";
 import { MdVilla } from "react-icons/md";
 import { MdApartment } from "react-icons/md";
@@ -6,25 +6,36 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FeatureHouses } from "../constants/constants";
 import { FaFire } from "react-icons/fa";
 import { MdHome } from "react-icons/md";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FeaturedHouses = () => {
   const [active, setactive] = useState("Villa");
-
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <div className="w-full sm:pl-20 pl-6 py-12 flex flex-col">
       <div className="flex justify-between flex-col md:flex-row sm:pr-20 pr-6 items-center">
         <div className="flex gap-2 flex-col">
           <div className="flex gap-2">
-            <p className="font-lexend text-xs text-orange">
+            <p
+              data-aos="fade-right"
+              className="font-lexend text-xs text-orange"
+            >
               Our Recommendation
             </p>
           </div>
-          <h1 className="text-3xl font-lexend font-bold text-primary">
+          <h1
+            data-aos="fade-left"
+            className="text-3xl font-lexend font-bold text-primary"
+          >
             Featured Houses
           </h1>
         </div>
         <div className="flex gap-3">
           <button
+            data-aos="fade-right"
             className={`${
               active === "House"
                 ? "bg-greenbutton border-none text-green"
@@ -36,6 +47,7 @@ const FeaturedHouses = () => {
             House
           </button>
           <button
+            data-aos="fade-down"
             className={`${
               active === "Villa"
                 ? "bg-greenbutton border-none text-green"
@@ -47,6 +59,7 @@ const FeaturedHouses = () => {
             Villa
           </button>
           <button
+            data-aos="fade-left"
             className={`${
               active === "Apartment"
                 ? "bg-greenbutton border-none text-green"
@@ -58,7 +71,7 @@ const FeaturedHouses = () => {
             Apartment
           </button>
         </div>
-        <div className="flex gap-3 items-center">
+        <div data-aos="fade-left" className="flex gap-3 items-center">
           <div className="rounded-full p-3 bg-neutral-300  flex items-center justify-center">
             <IoIosArrowBack />
           </div>
@@ -96,7 +109,10 @@ const FeatureCard = ({
   sellerpic,
   location,
 }) => (
-  <div className="flex w-[100%] hover:scale-105 cursor-pointer flex-col gap-2">
+  <div
+    data-aos="fade-up-right"
+    className="flex w-[100%] hover:scale-105 cursor-pointer flex-col gap-2"
+  >
     <div className="rounded-2xl relative w-full">
       <div
         className={` ${

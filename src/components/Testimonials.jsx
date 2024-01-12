@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Testimonies } from "../constants/constants";
 import Carousel from "./Carousel";
-import { Slider1, Slider2, Slider3, Slider4 } from "../assets";
 import { FaStar } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [Testimonies[0], Testimonies[1], Testimonies[2]];
 
@@ -15,16 +20,21 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 20000); // Change slide every 3 seconds
+    }, 5000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="w-full flex flex-col py-16">
+    <div className="w-full px-3 flex flex-col py-16">
       <div className="flex flex-col items-center mb-6  gap-4 justify-center">
-        <p className="font-lexend text-sm text-orange">See Our Reviews</p>
-        <p className="text-3xl font-lexend text-primary text-center font-bold">
+        <p data-aos="fade-left" className="font-lexend text-sm text-orange">
+          See Our Reviews
+        </p>
+        <p
+          data-aos="fade-right"
+          className="text-3xl font-lexend text-primary text-center font-bold"
+        >
           What Our Users Say About Us
         </p>
       </div>
@@ -52,7 +62,7 @@ const Testimonials = () => {
           </div>
         ))}
 
-        <div className="absolute bottom-[-15%] flex space-x-2">
+        <div className="absolute bottom-[-50%] flex space-x-2">
           {Testimonies.map((_, index) => (
             <button
               key={index}
@@ -78,13 +88,13 @@ const TestimonialCard = ({
   rating,
 }) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg">
+    <div className=" overflow-hidden rounded-lg shadow-lg">
       <img
         src={image}
         alt={title}
         className="w-full h-[100%] object-cover object-center"
       />
-      <div className="absolute bottom-0 w-full z-99  rounded-xl bg-white p-4">
+      <div className="absolute shadow-md bottom-[-50%] w-[90%] z-99 left-[05%] rounded-xl bg-white p-4">
         <h2 className="text-xl font-lexend text-primary font-semibold mb-2">
           {title}
         </h2>
